@@ -36,6 +36,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - git remote add origin https://github.com/Ryu114-Sato/Magonote_App.git
 - git push -u origin main
 
+-  git branch feature_202504 
+     - create brantch .
+
+- git checkout feature_202504
+     - change another brantch .
+
 
 
 
