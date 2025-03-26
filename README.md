@@ -62,4 +62,30 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
+## Vue
+
+  1. プロジェクト作成：
+
+  - vue create プロジェクト名
+
+  - npm run serve で TypeScript のコンパイルエラーになった場合
+    （`<script setup lang="ts"> `を使用したい場合、TypeScript の機能が含まれていない　）
+
+    - 対策： - 新規プロジェクト作成時に、「TypeScript」 の機能を選択する
+      または
+
+          - 既存プロジェクトに対して、TypeScript 関連のパッケージ（typescript、@vue/cli-plugin-typescript など）を追加して設定を行う
+
+    - Vue CLI プラグインの追加
+      - vue add typescript
+        インストール内容は以下：
+      ```
+       ? Use class-style component syntax? No
+       ? Use Babel alongside TypeScript (required for modern mode,
+       auto-detected polyfills, transpiling JSX)? Yes
+       ? Convert all .js files to .ts? No
+       ? Allow .js files to be compiled? Yes
+       ? Skip type checking of all declaration files (recommended for
+       apps)? Yes
+      ```
 
