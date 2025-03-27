@@ -34,7 +34,7 @@
     </div>
 </template>
   
-  <script lang="ts" setup>
+  <script setup>
   import { ref } from 'vue';
   import { useStore } from 'vuex';
   import localStorageCmp from '@/composable/localStorageCmp';
@@ -52,14 +52,14 @@
   const passwordError = ref('');
   
   // ユーザーIDの重複チェック
-  function isDuplicateLoginId(id: string): boolean {
-    const usersFromStore = store.state.users as any[];
-    const usersFromLocal = getUsers() as any[];
-    return (
-      usersFromStore.some(user => user.loginId === id) ||
-      usersFromLocal.some(user => user.loginId === id)
-    );
-  }
+  function isDuplicateLoginId(id) {
+  const usersFromStore = store.state.users;
+  const usersFromLocal = getUsers();
+  return (
+    usersFromStore.some(user => user.loginId === id) ||
+    usersFromLocal.some(user => user.loginId === id)
+  );
+}
   
   // 登録処理
   function registerUser() {
